@@ -1,21 +1,21 @@
-# ☕ Coffee EU-Check AI
+# Coffee EU-Check AI
 
 > **Nền Tảng Tiền Kiểm Tuân Thủ EUDR & CBAM Cho Cà Phê Việt Nam**  
-> *B2B Multi-Tenant SaaS Pre-Audit Platform — "Kiểm toán viên AI Nội bộ" trước khi hàng xuống tàu.*
+> *B2B Multi-Tenant SaaS Pre-Audit Platform — Hệ thống tiền kiểm toán AI & GIS độc lập.*
 
 ---
 
-## ⚡ 1. Bài Toán & Giải Pháp
+## 1. Bài Toán & Giải Pháp
 
-- **Nỗi đau 2026:** Hải quan EU sẽ tịch thu lô hàng cà phê hoặc phạt **4% doanh thu toàn cầu (EUDR Art. 38)** + đền bù lưu kho cảng **$15,000/container** nếu vi phạm 3 lỗi chết người:
-  1. 🔴 **ERR_MISSING_POLYGON (Art. 9(1)(d)):** Vườn >4.0 ha nộp 1 điểm GPS Point thay vì Polygon khép góc.
-  2. 🔴 **ERR_EXPIRED_LAND_AGREEMENT (Art. 3(b)):** Hợp đồng thuê/khoán đất nông hộ hết hiệu lực trước ngày mở tờ khai.
-  3. 🔴 **ERR_YIELD_EXCEEDED (Art. 10):** Mua gom cà phê trôi nổi làm tổng sản lượng vượt trần VICOFA (3.500 kg/ha).
-- **Giải pháp nền tảng:** Pre-Audit 100% hồ sơ (<30 giây) → Tính điểm **Readiness Score (0-100)** → Xuất **Action Plan PDF chuẩn Annex II** & Cấp **EUDR Passport 5 năm (Art. 31)** trước khi hàng xuống tàu.
+- **Thách thức pháp lý 2026:** Hải quan EU tịch thu lô hàng hoặc phạt **4% doanh thu toàn cầu (EUDR Art. 38)** + chi phí đền bù lưu kho **$15,000/container** khi vi phạm:
+  1. **ERR_MISSING_POLYGON (Art. 9(1)(d)):** Vườn >4.0 ha nộp 1 điểm GPS Point thay vì Polygon khép góc.
+  2. **ERR_EXPIRED_LAND_AGREEMENT (Art. 3(b)):** Hợp đồng thuê/khoán đất nông hộ hết hiệu lực trước ngày mở tờ khai.
+  3. **ERR_YIELD_EXCEEDED (Art. 10):** Tổng sản lượng mua gom vượt trần VICOFA (3.500 kg/ha).
+- **Giải pháp:** Tiền kiểm 100% hồ sơ (<30 giây) → Chỉ số **Readiness Score (0-100)** → Báo cáo **Action Plan PDF chuẩn Annex II** & Cấp mã **EUDR Passport lưu trữ 5 năm (Art. 31)**.
 
 ---
 
-## 🗺️ 2. Cấu Trúc Multi-Project Workspace
+## 2. Cấu Trúc Multi-Project Workspace
 
 ```text
 EU-CHECK/
@@ -30,7 +30,7 @@ EU-CHECK/
 
 ---
 
-## ⚙️ 3. Động Cơ Công Nghệ Core
+## 3. Động Cơ Công Nghệ Core
 
 - **PostGIS & Turf.js Spatial Engine:** Thẩm định Polygon khép góc, đối soát giao thoa bản đồ rừng Copernicus 2020.
 - **Gemini 2.5 Flash OCR Engine:** Đọc & kiểm tra tự động thời hạn hợp đồng thuê đất nông hộ scan.
@@ -39,7 +39,7 @@ EU-CHECK/
 
 ---
 
-## 📄 4. Căn Cứ Pháp Lý Luật EU
+## 4. Căn Cứ Pháp Lý Luật EU
 
 | Điều khoản EUDR | Nội dung quy định | Cơ chế giải quyết trên Coffee EU-Check AI |
 | :--- | :--- | :--- |
@@ -51,8 +51,8 @@ EU-CHECK/
 
 ---
 
-## 💰 5. Gói Cước SaaS Minh Bạch
+## 5. Mô Hình Thu Phí SaaS
 
-- 🟢 **Pay-per-Shipment:** 1.200.000 VNĐ / lô hàng xuất khẩu (~$50 USD).
-- 🔵 **Enterprise Professional:** 15.000.000 VNĐ / tháng (Quét không giới hạn + RBAC 4 Cấp + CBAM).
-- 🟣 **Custom Infrastructure:** Báo giá B2B Tập đoàn Top 10 (Dedicated Supabase RLS + API ERP/SAP).
+- **Pay-per-Shipment:** 1.200.000 VNĐ / lô hàng xuất khẩu (~$50 USD).
+- **Enterprise Professional:** 15.000.000 VNĐ / tháng (Quét không giới hạn + RBAC 4 Cấp + CBAM).
+- **Custom Infrastructure:** Báo giá B2B Tập đoàn Top 10 (Dedicated Supabase RLS + API ERP/SAP).
