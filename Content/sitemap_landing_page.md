@@ -79,7 +79,7 @@ Trang Landing Page được thiết kế như một cuốn tiểu thuyết B2B 6
 
 ## 📖 3. DIỄN GIẢI CHI TIẾT TỪNG PHẦN LANDING PAGE (PROSE NARRATIVE)
 
-- **Header (`LandingHeader`):** Cao `h-16` thanh thoát chuẩn Simplamo.com. Logo icon Emerald Coffee EU-Check + Badge EUDR. Menu Trang chủ, Giải Pháp ▾, 5 Lỗi Âm Thầm, Quy Trình, Bảng Giá, FAQ. Nút Đăng Nhập & Dùng Thử Miễn Phí.
+- **Header (`LandingHeader`):** Cao `h-16` thanh thoát. Logo biểu trưng Cán cân Themis mạ vàng + Badge EUDR. Menu Trang chủ, Giải Pháp ▾, 5 Lỗi Âm Thầm, Quy Trình, Bảng Giá, FAQ. Nút Đăng Nhập & Dùng Thử Miễn Phí.
 - **Hero Section (`HeroStorySection`):** Tiêu đề *"Tiền Kiểm 100% Lô Hàng Cà Phê EU — Loại Bỏ Lỗi GeoJSON & Hợp Đồng Đất"*. Phía bên phải là thẻ tương tác Live Pre-Audit Simulator (Score 35/100 → 98/100 PASS). Nút Quét Hồ Sơ Lô Hàng Ngay & Tính ROI Rủi Ro Lô Hàng.
 - **Chương 1: 5 Lỗi Âm Thầm (`PainPointsStorySection` - `#pain-points`):**
   - 🔴 **ERR_MISSING_POLYGON (EUDR Art. 9(1)(d)):** Vườn > 4.0 ha nộp 1 điểm GPS Point → Bị giữ hàng tại cảng EU.
@@ -95,9 +95,9 @@ Trang Landing Page được thiết kế như một cuốn tiểu thuyết B2B 6
 
 ---
 
-## 🎨 4. QUY TẮC THIẾT KẾ THEO PHONG CÁCH SIMPLAMO.COM
+## 🎨 4. QUY TẮC THIẾT KẾ THEO PHONG CÁCH THEMIS REGAL LEGAL-TECH
 
-1. **Tông Màu Sáng & Thoáng (Clean Light Theme):** Nền chủ đạo White (`bg-white`) và Slate nhạt (`bg-slate-50`), điểm nhấn Emerald Green (`bg-emerald-600`).
-2. **Typography Rõ Nét & Khoảng Trắng Rộng:** Phông chữ đen đậm (`text-slate-900`), thẻ bo tròn 2xl mượt mà (`rounded-2xl border border-slate-200 shadow-sm hover:shadow-md`).
-3. **Thanh Header Siêu Gọn (Ultra-Compact Slim Header):** Chiều cao `h-16` thanh thoát, Logo nhỏ gọn 1 dòng (`whitespace-nowrap`), Nút Đăng Nhập & Dùng Thử Miễn Phí nằm gọn bên phải.
+1. **Tông Màu Executive Dark Theme (Dark Canvas & Imperial Gold):** Nền chủ đạo Obsidian Black (`#080B09` / `bg-[#080B09]`) và Deep Obsidian Emerald (`#0A130F`), điểm nhấn Imperial Metallic Gold (`#D4AF37` / `text-amber-400`) & Deep Forest Emerald (`#0B3B24` / `bg-emerald-900`).
+2. **Typography Uy Nghiêm & Sắc Nét:** Tiêu đề H1/H2 phông chữ Serif cổ điển (`Cinzel` / `Cormorant Garamond`), nội dung phông chữ Sans-serif (`Plus Jakarta Sans`), dữ liệu mã GeoJSON & QR Passport phông Monospace (`JetBrains Mono`). Thẻ bo tròn 2xl mượt mà hiệu ứng Dark Glassmorphism (`rounded-2xl border border-amber-500/20 bg-[#0A130F]/90 shadow-xl backdrop-blur-md`).
+3. **Thanh Header Siêu Gọn (Ultra-Compact Slim Header):** Chiều cao `h-16` thanh thoát, Logo biểu trưng Cán cân Themis mạ vàng 1 dòng (`whitespace-nowrap`), Nút Đăng Nhập & Dùng Thử Miễn Phí ánh kim nằm gọn bên phải.
 4. **Quy tắc Zero Mock:** Mọi nút bấm chuyển đổi kết nối 100% đến luồng ứng dụng làm việc thật (`/dashboard`).

@@ -1,59 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%" style="background:#F8FAFC; border-radius: 16px; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%" style="background:#080B09; border-radius: 16px; font-family: 'Cinzel', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;">
   <!-- Title -->
-  <text x="40" y="55" fill="#0F172A" font-size="24" font-weight="800">COFFEE EU-CHECK AI — BRAND COLOR PALETTE</text>
-  <text x="40" y="80" fill="#64748B" font-size="14" font-weight="500">Bảng màu chuẩn B2B Enterprise (Simplamo Emerald Theme)</text>
+  <text x="40" y="55" fill="#F3E5AB" font-size="22" font-weight="800" letter-spacing="1">COFFEE EU-CHECK AI — THEMIS REGAL COLOR PALETTE</text>
+  <text x="40" y="80" fill="#A3A89E" font-size="13" font-weight="500">Bảng màu trắc nghiệm pháp lý B2B Enterprise (Extracted from Logo.jpg)</text>
 
   <!-- Color Swatches Grid -->
   <g transform="translate(40, 110)">
-    <!-- Swatch 1: Primary Emerald -->
+    <!-- Swatch 1: Dark Canvas (Obsidian Black) -->
     <g transform="translate(0, 0)">
-      <rect width="150" height="200" rx="12" fill="#059669"/>
-      <rect y="130" width="150" height="70" rx="0" fill="#FFFFFF" opacity="0.95"/>
-      <text x="15" y="155" fill="#0F172A" font-size="14" font-weight="700">Primary Brand</text>
-      <text x="15" y="175" fill="#059669" font-size="15" font-weight="800">#059669</text>
-      <text x="15" y="190" fill="#64748B" font-size="11" font-weight="500">Emerald Green</text>
+      <rect width="150" height="200" rx="12" fill="#080B09" stroke="#D4AF37" stroke-width="1.5"/>
+      <rect y="130" width="150" height="70" rx="0" fill="#0A130F" opacity="0.95"/>
+      <text x="15" y="155" fill="#F5F5F0" font-size="14" font-weight="700">Dark Canvas</text>
+      <text x="15" y="175" fill="#D4AF37" font-size="15" font-weight="800">#080B09</text>
+      <text x="15" y="190" fill="#A3A89E" font-size="11" font-weight="500">Obsidian Black</text>
     </g>
 
-    <!-- Swatch 2: Deep Slate -->
+    <!-- Swatch 2: Imperial Metallic Gold -->
     <g transform="translate(170, 0)">
-      <rect width="150" height="200" rx="12" fill="#0F172A"/>
-      <rect y="130" width="150" height="70" rx="0" fill="#FFFFFF" opacity="0.95"/>
-      <text x="15" y="155" fill="#0F172A" font-size="14" font-weight="700">Dark Base</text>
-      <text x="15" y="175" fill="#0F172A" font-size="15" font-weight="800">#0F172A</text>
-      <text x="15" y="190" fill="#64748B" font-size="11" font-weight="500">Deep Slate</text>
+      <rect width="150" height="200" rx="12" fill="#D4AF37"/>
+      <rect y="130" width="150" height="70" rx="0" fill="#0A130F" opacity="0.95"/>
+      <text x="15" y="155" fill="#F5F5F0" font-size="14" font-weight="700">Imperial Gold</text>
+      <text x="15" y="175" fill="#D4AF37" font-size="15" font-weight="800">#D4AF37</text>
+      <text x="15" y="190" fill="#A3A89E" font-size="11" font-weight="500">Metallic Accent</text>
     </g>
 
-    <!-- Swatch 3: Light Canvas -->
+    <!-- Swatch 3: Forest Emerald Dark -->
     <g transform="translate(340, 0)">
-      <rect width="150" height="200" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
-      <rect y="130" width="148" height="68" x="1" fill="#FFFFFF" opacity="0.95"/>
-      <text x="15" y="155" fill="#0F172A" font-size="14" font-weight="700">Light Canvas</text>
-      <text x="15" y="175" fill="#475569" font-size="15" font-weight="800">#F8FAFC</text>
-      <text x="15" y="190" fill="#64748B" font-size="11" font-weight="500">Clean Slate Light</text>
+      <rect width="150" height="200" rx="12" fill="#0B3B24" stroke="#D4AF37" stroke-width="1"/>
+      <rect y="130" width="150" height="70" rx="0" fill="#0A130F" opacity="0.95"/>
+      <text x="15" y="155" fill="#F5F5F0" font-size="14" font-weight="700">Forest Emerald</text>
+      <text x="15" y="175" fill="#10B981" font-size="15" font-weight="800">#0B3B24</text>
+      <text x="15" y="190" fill="#A3A89E" font-size="11" font-weight="500">EUDR Green Brand</text>
     </g>
 
-    <!-- Swatch 4: Critical Alert -->
+    <!-- Swatch 4: Harvest Crimson -->
     <g transform="translate(510, 0)">
-      <rect width="150" height="200" rx="12" fill="#EF4444"/>
-      <rect y="130" width="150" height="70" rx="0" fill="#FFFFFF" opacity="0.95"/>
-      <text x="15" y="155" fill="#0F172A" font-size="14" font-weight="700">Critical Alert</text>
-      <text x="15" y="175" fill="#EF4444" font-size="15" font-weight="800">#EF4444</text>
-      <text x="15" y="190" fill="#64748B" font-size="11" font-weight="500">Crimson Warning</text>
+      <rect width="150" height="200" rx="12" fill="#C81D25"/>
+      <rect y="130" width="150" height="70" rx="0" fill="#0A130F" opacity="0.95"/>
+      <text x="15" y="155" fill="#F5F5F0" font-size="14" font-weight="700">Harvest Red</text>
+      <text x="15" y="175" fill="#EF4444" font-size="15" font-weight="800">#C81D25</text>
+      <text x="15" y="190" fill="#A3A89E" font-size="11" font-weight="500">Coffee Cherry / Alert</text>
     </g>
 
-    <!-- Swatch 5: Soft Border -->
+    <!-- Swatch 5: Durian Gold & Amber -->
     <g transform="translate(680, 0)">
-      <rect width="150" height="200" rx="12" fill="#E2E8F0"/>
-      <rect y="130" width="150" height="70" rx="0" fill="#FFFFFF" opacity="0.95"/>
-      <text x="15" y="155" fill="#0F172A" font-size="14" font-weight="700">Soft Border</text>
-      <text x="15" y="175" fill="#64748B" font-size="15" font-weight="800">#E2E8F0</text>
-      <text x="15" y="190" fill="#64748B" font-size="11" font-weight="500">Slate Border</text>
+      <rect width="150" height="200" rx="12" fill="#E6B800"/>
+      <rect y="130" width="150" height="70" rx="0" fill="#0A130F" opacity="0.95"/>
+      <text x="15" y="155" fill="#F5F5F0" font-size="14" font-weight="700">Durian Amber</text>
+      <text x="15" y="175" fill="#F59E0B" font-size="15" font-weight="800">#E6B800</text>
+      <text x="15" y="190" fill="#A3A89E" font-size="11" font-weight="500">Agri Produce Gold</text>
     </g>
   </g>
 
   <!-- Usage Note -->
-  <rect x="40" y="345" width="820" height="60" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
-  <text x="60" y="380" fill="#334155" font-size="13" font-weight="500">
-    <tspan font-weight="700" fill="#059669">Quy tắc phối màu:</tspan> Nền chủ đạo Sáng (#FFFFFF / #F8FAFC) + Điểm nhấn Emerald Green (#059669) cho CTA &amp; Status PASS + Chữ Deep Slate (#0F172A).
+  <rect x="40" y="345" width="820" height="60" rx="10" fill="#0A130F" stroke="#D4AF37" stroke-width="1"/>
+  <text x="60" y="380" fill="#F5F5F0" font-size="13" font-weight="500">
+    <tspan font-weight="700" fill="#D4AF37">Quy tắc phối màu Executive Regal:</tspan> Nền chủ đạo Obsidian Black (#080B09) + Điểm nhấn Metallic Gold (#D4AF37) &amp; Forest Emerald (#0B3B24) + Chữ Parchment White (#F5F5F0).
   </text>
 </svg>

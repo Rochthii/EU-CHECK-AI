@@ -1,0 +1,106 @@
+/* ==========================================================================
+   COFFEE EU-CHECK AI — GLOBAL CSS STYLESHEET (THEMIS REGAL LEGAL-TECH)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Canvas & Backgrounds */
+  --bg-obsidian: #080B09;
+  --bg-card-emerald: #0A130F;
+  --bg-elevated: #101C16;
+
+  /* Primary Brand & Accents */
+  --color-forest-emerald: #0B3B24;
+  --color-forest-light: #104E30;
+  --color-imperial-gold: #D4AF37;
+  --color-imperial-gold-light: #F3E5AB;
+
+  /* Harvest & Legal Accents */
+  --color-cherry-crimson: #C81D25;
+  --color-durian-amber: #E6B800;
+  --color-gavel-mahogany: #5C2C16;
+
+  /* Typography Colors */
+  --text-parchment: #F5F5F0;
+  --text-warm-gray: #A3A89E;
+  --text-muted-slate: #6D7368;
+
+  /* Glassmorphic Borders */
+  --border-gold-light: rgba(212, 175, 55, 0.35);
+  --border-gold-muted: rgba(212, 175, 55, 0.15);
+  --border-divider: #1A2A20;
+
+  /* Font Families */
+  --font-serif-heading: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  --font-sans-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono-data: 'JetBrains Mono', monospace;
+}
+
+/* --------------------------------------------------------------------------
+   Global Layout & Dark Mode Canvas
+   -------------------------------------------------------------------------- */
+html, body {
+  background-color: var(--bg-obsidian);
+  color: var(--text-parchment);
+  font-family: var(--font-sans-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings — Elegant Serif Style */
+h1, h2, h3, .font-heading {
+  font-family: var(--font-serif-heading);
+  letter-spacing: 0.02em;
+  color: var(--text-parchment);
+}
+
+/* Mono Elements — GeoJSON & Passport Codes */
+code, pre, .font-mono {
+  font-family: var(--font-mono-data);
+}
+
+/* --------------------------------------------------------------------------
+   Glassmorphism Utility Classes
+   -------------------------------------------------------------------------- */
+.glass-card {
+  background: rgba(10, 19, 15, 0.90);
+  border: 1px solid var(--border-gold-muted);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.50);
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--border-gold-light);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.20);
+}
+
+.gold-hero-glow {
+  background: radial-gradient(ellipse at top left, rgba(212, 175, 55, 0.15), rgba(10, 19, 15, 0.95));
+  border: 1px solid var(--color-imperial-gold);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+/* Custom Executive Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-obsidian);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A2A20;
+  border: 1px solid var(--border-gold-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-imperial-gold);
+}

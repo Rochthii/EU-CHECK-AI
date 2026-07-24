@@ -8,7 +8,7 @@
 
 ## 📌 Quy Định Điều Hướng Dùng Chung
 
-- **Brand Context:** Luôn đọc và tuân thủ `brand/brand.md` (Tông màu Emerald Green, Tone giọng B2B Enterprise, 3 Messaging Pillars).
+- **Brand Context:** Luôn đọc và tuân thủ `brand/brand.md` (Themis Executive Regal Legal-Tech Theme, Obsidian Black `#080B09` canvas, Imperial Metallic Gold `#D4AF37` accent, Forest Emerald `#0B3B24`, Tone giọng B2B Enterprise Legal-Tech, 3 Messaging Pillars).
 - **Website App:** Nằm trong thư mục `eu-check-web/` (Next.js / React / TailwindCSS).
 - **Bài viết & Docs:** Quản lý trong `Content/` (Bài phân tích luật EUDR, bài chuyên sâu) & `ContentViral/` (Hook social, bài ngắn).
 - **Video & Kịch bản:** Quản lý trong `Videos/` (Demo sản phẩm, Shorts, Reels).
