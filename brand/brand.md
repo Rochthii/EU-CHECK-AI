@@ -80,3 +80,17 @@ Coffee EU-Check AI là **Nền tảng Tiền kiểm Tuân thủ EUDR & CBAM (Pre
 ### Pillar 3: Enterprise Trust & 5-Year EUDR Passport (Hồ Sơ Định Danh & Bảo Mật 5 Năm)
 - **Thông điệp:** Cấp mã QR Passport lưu trữ hồ sơ 5 năm theo điều 31 EUDR với hạ tầng PostgreSQL RLS bảo vệ dữ liệu thương mại độc quyền.
 - **Giá trị khách hàng:** Giúp doanh nghiệp tự tin khi bị hải quan hoặc đối tác EU kiểm tra đột xuất (Post-audit).
+
+---
+
+## 6. Bộ Nhận Diện Thị Giác (Visual Brand Assets)
+
+### 6.1 Logo Thương Hiệu Vector
+![Coffee EU-Check AI Logo](file:///e:/Projects/Project_ca_nhan/EU-CHECK/brand/assets/logo.svg)
+
+### 6.2 Bảng Màu Chuẩn B2B Enterprise
+![Color Palette](file:///e:/Projects/Project_ca_nhan/EU-CHECK/brand/assets/color_palette.svg)
+
+### 6.3 Thẻ Thẩm Định EUDR Compliance Passport Card
+![EUDR Passport Card](file:///e:/Projects/Project_ca_nhan/EU-CHECK/brand/assets/passport_card.svg)
+

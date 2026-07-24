@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%" style="background:#F8FAFC; border-radius: 16px; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
+  <!-- Title -->
+  <text x="40" y="55" fill="#0F172A" font-size="24" font-weight="800">COFFEE EU-CHECK AI — BRAND COLOR PALETTE</text>
+  <text x="40" y="80" fill="#64748B" font-size="14" font-weight="500">Bảng màu chuẩn B2B Enterprise (Simplamo Emerald Theme)</text>
+
+  <!-- Color Swatches Grid -->
+  <g transform="translate(40, 110)">
+    <!-- Swatch 1: Primary Emerald -->
+    <g transform="translate(0, 0)">
+      <rect width="150" height="200" rx="12" fill="#059669"/>
+      <rect y="130" width="150" height="70" rx="0" fill="#FFFFFF" opacity="0.95"/>
+      <text x="15" y="155" fill="#0F172A" font-size="14" font-weight="700">Primary Brand</text>
+      <text x="15" y="175" fill="#059669" font-size="15" font-weight="800">#059669</text>
+      <text x="15" y="190" fill="#64748B" font-size="11" font-weight="500">Emerald Green</text>
+    </g>
+
+    <!-- Swatch 2: Deep Slate -->
+    <g transform="translate(170, 0)">
+      <rect width="150" height="200" rx="12" fill="#0F172A"/>
+      <rect y="130" width="150" height="70" rx="0" fill="#FFFFFF" opacity="0.95"/>
+      <text x="15" y="155" fill="#0F172A" font-size="14" font-weight="700">Dark Base</text>
+      <text x="15" y="175" fill="#0F172A" font-size="15" font-weight="800">#0F172A</text>
+      <text x="15" y="190" fill="#64748B" font-size="11" font-weight="500">Deep Slate</text>
+    </g>
+
+    <!-- Swatch 3: Light Canvas -->
+    <g transform="translate(340, 0)">
+      <rect width="150" height="200" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+      <rect y="130" width="148" height="68" x="1" fill="#FFFFFF" opacity="0.95"/>
+      <text x="15" y="155" fill="#0F172A" font-size="14" font-weight="700">Light Canvas</text>
+      <text x="15" y="175" fill="#475569" font-size="15" font-weight="800">#F8FAFC</text>
+      <text x="15" y="190" fill="#64748B" font-size="11" font-weight="500">Clean Slate Light</text>
+    </g>
+
+    <!-- Swatch 4: Critical Alert -->
+    <g transform="translate(510, 0)">
+      <rect width="150" height="200" rx="12" fill="#EF4444"/>
+      <rect y="130" width="150" height="70" rx="0" fill="#FFFFFF" opacity="0.95"/>
+      <text x="15" y="155" fill="#0F172A" font-size="14" font-weight="700">Critical Alert</text>
+      <text x="15" y="175" fill="#EF4444" font-size="15" font-weight="800">#EF4444</text>
+      <text x="15" y="190" fill="#64748B" font-size="11" font-weight="500">Crimson Warning</text>
+    </g>
+
+    <!-- Swatch 5: Soft Border -->
+    <g transform="translate(680, 0)">
+      <rect width="150" height="200" rx="12" fill="#E2E8F0"/>
+      <rect y="130" width="150" height="70" rx="0" fill="#FFFFFF" opacity="0.95"/>
+      <text x="15" y="155" fill="#0F172A" font-size="14" font-weight="700">Soft Border</text>
+      <text x="15" y="175" fill="#64748B" font-size="15" font-weight="800">#E2E8F0</text>
+      <text x="15" y="190" fill="#64748B" font-size="11" font-weight="500">Slate Border</text>
+    </g>
+  </g>
+
+  <!-- Usage Note -->
+  <rect x="40" y="345" width="820" height="60" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="60" y="380" fill="#334155" font-size="13" font-weight="500">
+    <tspan font-weight="700" fill="#059669">Quy tắc phối màu:</tspan> Nền chủ đạo Sáng (#FFFFFF / #F8FAFC) + Điểm nhấn Emerald Green (#059669) cho CTA &amp; Status PASS + Chữ Deep Slate (#0F172A).
+  </text>
+</svg>
