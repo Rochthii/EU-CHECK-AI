@@ -1,31 +1,52 @@
-# TÀI LIỆU BẢNG GIÁ CƯỚC & MÔ HÌNH ROI (PRICING & ROI DOC)
-**Product:** Coffee EU-Check AI — B2B SaaS Commercial Model & Return on Investment
+# PRICING DOC: BẢNG GIÁ COFFEE EU-CHECK AI
 
-## 1. 3 GÓI CƯỚC THƯƠNG MẠI & ĐỐI TƯỢNG PHÙ HỢP
+Coffee EU-Check AI cung cấp các gói dịch vụ linh hoạt, phục vụ từ các doanh nghiệp xuất khẩu vừa và nhỏ cho tới các tập đoàn đa quốc gia, với mô hình SaaS bảo mật tuyệt đối.
 
-| Tên Gói Cước | Đơn Giá | Đối Tượng Phù Hợp | Quyền Lợi Cốt Lõi |
-| :--- | :--- | :--- | :--- |
-| **Starter Pay-Per-Shipment** | 1.200.000 VNĐ / lô hàng | HTX & Doanh nghiệp vừa (5 - 15 container/năm) | Quét 100% GeoJSON + OCR Hợp đồng + Cấp QR Passport 5 năm + Báo cáo PDF |
-| **Enterprise Professional (Khuyên Dùng)** | 15.000.000 VNĐ / tháng | Doanh nghiệp Xuất khẩu Top 20 (15 - 80 container/tháng) | Không giới hạn lô + PostGIS & Copernicus Vệ tinh + Hỗ trợ Hải quan EU 24/7 + RLS Database |
-| **Custom Infrastructure** | Báo giá B2B Tập đoàn Top 10 | Tập đoàn Xuất khẩu Đa quốc gia (> 100 container/tháng) | Private Cloud / On-Premise + Custom AI Model + API Webhook tích hợp ERP SAP/Oracle |
+## 1. Các Gói Dịch Vụ & Tính Năng
+
+### GÓI 1: Pay-per-Shipment (Dùng bao nhiêu trả bấy nhiêu)
+- **Đối tượng phù hợp:** Doanh nghiệp xuất khẩu quy mô nhỏ, có dưới 10 lô hàng xuất khẩu sang EU mỗi năm, hoặc các đại lý cần kiểm tra hồ sơ đột xuất.
+- **Giá dịch vụ:** **1.200.000 VNĐ / lô hàng xuất khẩu** (~$50 USD).
+- **Tính năng bao gồm:**
+  - Thẩm định 1 bộ hồ sơ lô hàng xuất khẩu bằng AI (Spatial Engine & OCR).
+  - Trả kết quả Readiness Score & Cấp mã EUDR Passport (lưu trữ 5 năm).
+  - Báo cáo lỗi trực tiếp trên giao diện.
+
+### GÓI 2: Enterprise Professional (Trả phí hằng tháng)
+- **Đối tượng phù hợp:** Doanh nghiệp xuất khẩu tầm trung đến lớn, xuất khẩu thường xuyên, có mạng lưới hợp tác xã và đại lý thu mua riêng.
+- **Giá dịch vụ:** **15.000.000 VNĐ / tháng** (~$600 USD).
+- **Tính năng bao gồm:**
+  - Quét & tiền kiểm hồ sơ **không giới hạn** số lượng.
+  - Tích hợp thêm module kiểm tra phát thải CBAM cơ bản.
+  - Hệ thống Quản lý Phân quyền (RBAC) 4 cấp: Admin, Quản lý Vùng, Thương Lái, Nông dân.
+  - Dashboard báo cáo toàn cảnh chuỗi cung ứng theo thời gian thực.
+  - Ưu tiên hỗ trợ kỹ thuật (SLA 99.9%).
+
+### GÓI 3: Custom Infrastructure (Giải pháp chuyên biệt)
+- **Đối tượng phù hợp:** Top 10 Tập đoàn xuất khẩu cà phê lớn nhất, Tập đoàn FDI yêu cầu tích hợp sâu vào hệ thống nội bộ.
+- **Giá dịch vụ:** **Báo giá riêng biệt** (Dựa trên quy mô lưu lượng).
+- **Tính năng bao gồm:**
+  - Mọi tính năng của gói Enterprise Professional.
+  - Dedicated Database với PostgreSQL RLS (hạ tầng máy chủ riêng biệt).
+  - Tích hợp API hai chiều trực tiếp vào hệ thống ERP / SAP của doanh nghiệp.
+  - Đội ngũ kỹ sư hỗ trợ triển khai on-site 24/7.
 
 ---
 
-## 2. CÔNG THỨC ROI CHUẨN XUẤT KHẨU CÀ PHÊ EU
-`ĐẦU VÀO (INPUT) ---> TIẾT KIỆM (SAVINGS) ---> THỜI GIAN HOÀN VỐN (PAYBACK)`
+## 2. Công Thức Tính ROI (Return on Investment)
 
-### A. Thông số đầu vào (Input)
-- **Quy mô lô hàng:** 20 Container Cà Phê Robusta/Arabica xuất cảng EU / tháng.
-- **Giá trị trung bình lô hàng:** $90.000 USD (Khoảng 2.25 Tỷ VNĐ) / Container 20ft.
-- **Phí tổn rủi ro lưu cảng:** $15.000 USD / Container (Lưu container, lưu bãi đền bù).
-- **Áp lực phạt tối đa:** 4% Tổng doanh thu toàn cầu theo Điều 38 EUDR.
+Đầu tư vào Coffee EU-Check AI không phải là một khoản chi phí phần mềm, mà là **hợp đồng bảo hiểm lợi nhuận** cho toàn bộ chuỗi cung ứng xuất khẩu của bạn.
 
-### B. Tính toán tiết kiệm (Savings)
-1. **Tránh phí lưu cảng:** Loại bỏ nguy cơ 1 container bị giữ -> Tiết kiệm $15.000 USD (375.000.000 VNĐ).
-2. **Tiết kiệm nhân sự:** Giảm từ 3 nhân sự thẩm định (45M đ/tháng) xuống 1 nhân sự AI SaaS (15M đ/tháng) -> Tiết kiệm 30.000.000 VNĐ/tháng.
-3. **TỔNG TIẾT KIỆM HÀNG THÁNG:** 405.000.000 VNĐ / Tháng.
+### Bài toán Rủi Ro Không Sử Dụng (Chi phí ẩn):
+Theo quy định EUDR (Art. 38), một lô hàng vi phạm (sai tọa độ, sai hợp đồng, quá sản lượng) sẽ đối mặt:
+1. **Lưu kho chờ kiểm tra bổ sung:** Chi phí đền bù bãi lưu bãi tại cảng EU trung bình **$15,000 / container**.
+2. **Hình phạt cao nhất:** Phạt hành chính lên tới **4% doanh thu toàn cầu** của doanh nghiệp.
+3. **Mất uy tín:** Bị đưa vào danh sách đen, nguy cơ mất bạn hàng EU vĩnh viễn.
 
-### C. Thời gian hoàn vốn (Payback Period)
-- **Chi phí SaaS:** 15.000.000 VNĐ / Tháng (Gói Enterprise Pro).
-- **Tỷ lệ ROI:** 405.000.000 / 15.000.000 = **2700% (Gấp 27 lần)**.
-- **THỜI GIAN HOÀN VỐN:** **HOÀN VỐN NGAY TỪ LÔ HÀNG ĐẦU TIÊN (DƯỚI 03 NGÀY VẬN HÀNH)**.
+### Bài toán Tiết Kiệm Khi Dùng EU-Check AI:
+- **Đầu vào (Chi phí đầu tư):** Gói Professional 15.000.000 VNĐ/tháng (~180.000.000 VNĐ/năm).
+- **Thực thi:** Tiền kiểm 100% hồ sơ *trước khi tàu rời cảng*, lọc sạch mọi lô hàng bị lỗi ERR_MISSING_POLYGON, ERR_YIELD_EXCEEDED.
+- **Tiết kiệm trực tiếp:** 
+  - Cứ ngăn chặn được **1 container** lỗi, doanh nghiệp **tiết kiệm ngay lập tức $15,000** (~380.000.000 VNĐ) tiền lưu kho.
+  - Ngăn chặn hoàn toàn rủi ro phạt 4% doanh thu (có thể lên đến hàng triệu đô la).
+- **Thời gian hoàn vốn (Payback Period):** Ngay ở lô hàng xuất khẩu thành công đầu tiên, giá trị hoàn vốn đã ở mức **>200%**.

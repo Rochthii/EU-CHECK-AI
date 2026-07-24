@@ -1,46 +1,41 @@
-# TÀI LIỆU ĐỘNG CƠ TÍNH NĂNG TIỀN KIỂM (FEATURE DOC)
-**Product:** Coffee EU-Check AI — Themis Regal Legal-Tech Pre-Audit System
+# FEATURE DOC: ĐẶC TẢ TÍNH NĂNG COFFEE EU-CHECK AI
 
-## MỤC LỤC TỰ ĐỘNG
-1. Tổng Quan Kiến Trúc Động Cơ Kép (Dual GIS & AI Engine)
-2. Tính Năng 01: PostGIS Deforestation Polygon & Copernicus Satellite Audit Engine
-3. Tính Năng 02: Gemini 2.5 Flash OCR & Land Agreement Contract Auditor
-4. Tính Năng 03: Mass Balance VICOFA Yield Ceiling Guard (3.500 kg/ha)
-5. Tính Năng 04: 5-Year EUDR Passport & PostgreSQL Row-Level Security Vault
+## Mục lục
+1. [PostGIS & Turf.js Spatial Engine](#1-postgis--turfjs-spatial-engine)
+2. [Gemini 2.5 Flash OCR Engine](#2-gemini-25-flash-ocr-engine)
+3. [Mass Balance Guard](#3-mass-balance-guard)
+4. [PostgreSQL Row-Level Security (RLS)](#4-postgresql-row-level-security-rls)
 
 ---
 
-## 1. TỔNG QUAN KIẾN TRÚC
-Coffee EU-Check AI đóng vai trò là 'Kiểm toán viên AI Nội bộ', tự động quét 100% tài liệu địa lý (GeoJSON), hợp đồng thuê đất nông hộ scan (Gemini 2.5 Flash OCR), kiểm soát trần sản lượng VICOFA (3.500 kg/ha) và cấp mã EUDR Passport lưu trữ 5 năm (EUDR Art. 31).
+## 1. PostGIS & Turf.js Spatial Engine
+- **Tên tính năng:** Động cơ Thẩm định Không gian (Spatial Engine)
+- **Vấn đề pháp lý/vận hành nó giải quyết:** Giải quyết vi phạm **ERR_MISSING_POLYGON (Art. 9(1)(d))** của luật EUDR. Nông hộ có diện tích >4.0 ha thường nộp sai định dạng (nộp 1 điểm GPS Point thay vì Polygon khép góc), dẫn đến rủi ro bị từ chối hồ sơ ngay tại cảng EU.
+- **Cách hoạt động:** Hệ thống sử dụng PostGIS và Turf.js để vẽ lại và thẩm định tọa độ địa lý. Engine tự động kiểm tra tính khép góc của Polygon, đo lường chính xác diện tích vườn thực tế, và đối soát giao thoa (intersect) với bản đồ rừng Copernicus năm 2020 để xác nhận không có hành vi phá rừng.
+- **Lợi ích đo lường được:** 
+  - Rút ngắn thời gian xác minh bản đồ từ vài ngày (bằng mắt người) xuống **dưới 5 giây/hồ sơ**.
+  - Đạt điểm Readiness Score tối đa cho tiêu chí dữ liệu địa lý.
 
----
+## 2. Gemini 2.5 Flash OCR Engine
+- **Tên tính năng:** Trợ lý OCR Phân tích Pháp lý
+- **Vấn đề pháp lý/vận hành nó giải quyết:** Ngăn chặn vi phạm **ERR_EXPIRED_LAND_AGREEMENT (Art. 3(b))** liên quan đến tính hợp pháp của quyền sử dụng đất. Các bản scan hợp đồng thuê đất nông hộ thường xuyên bị hết hạn nhưng nhân sự kiểm tra bị sót.
+- **Cách hoạt động:** Nhúng sức mạnh của Gemini 2.5 Flash, hệ thống OCR lập tức đọc và trích xuất dữ liệu từ hàng ngàn bản scan PDF/ảnh của Sổ đỏ, Hợp đồng thuê/khoán đất. Phân tích tự động ngày hết hạn, đối chiếu chéo với ngày mở tờ khai hải quan dự kiến.
+- **Lợi ích đo lường được:** 
+  - Khả năng đọc và bóc tách dữ liệu chuẩn xác lên tới 99% cho các loại văn bản giấy tờ Việt Nam.
+  - Tiết kiệm 95% thời gian rà soát thủ tục pháp lý.
 
-## 2. TÍNH NĂNG 01: POSTGIS POLYGON & COPERNICUS SATELLITE ENGINE
-- **Tên tính năng:** Động cơ Kiểm toán Tọa độ Địa lý PostGIS & Bản đồ Rừng Copernicus 2020
-- **Vấn đề nó giải:** Nông hộ rẫy cà phê > 4.0 ha nộp 1 điểm GPS đơn lẻ (Point) thay vì chuỗi tọa độ đa giác Polygon (EUDR Art. 9(1)(d)). Hoặc đa giác bị chồng lấp với tọa độ rừng nguyên sinh theo bản đồ nền vệ tinh Copernicus 31/12/2020.
-- **Cách hoạt động:** Tự động phân tích GeoJSON/KML qua PostGIS Spatial Engine & Turf.js. Đối soát diện tích rẫy thực tế với ranh giới bản đồ rừng vệ tinh Copernicus 2020. Hệ thống gắn cờ ERR_MISSING_POLYGON hoặc ERR_DEFORESTATION_OVERLAP dưới 10 giây.
-- **Lợi ích đo được:** Loại bỏ 100% nguy cơ giữ container tại cảng EU do lỗi định dạng tọa độ; Rút ngắn thời gian kiểm tra ranh giới rẫy từ 14 ngày thủ công xuống < 10 giây.
+## 3. Mass Balance Guard
+- **Tên tính năng:** Hệ thống Vệ sĩ Cân bằng Khối lượng
+- **Vấn đề pháp lý/vận hành nó giải quyết:** Chống lại vi phạm **ERR_YIELD_EXCEEDED (Art. 10)**. Tình trạng thương lái mua gom quá trần sản lượng cho phép của một vườn (ví dụ: nông hộ có 1 ha nhưng khai bán 10 tấn) dẫn tới hồ sơ bị hải quan EU xếp vào diện gian lận nguy cơ cao.
+- **Cách hoạt động:** Hệ thống tự động đặt mức trần sản lượng (ví dụ theo trần VICOFA là 3.500 kg/ha). Mọi phiếu thu mua từ đại lý sẽ được nạp vào sổ cái hệ thống. Khi tổng sản lượng mua vượt quá diện tích thực, hệ thống lập tức chốt chặn, cảnh báo đỏ và khóa tính năng xuất mã QR Passport cho lô hàng.
+- **Lợi ích đo lường được:**
+  - Bảo vệ 100% doanh nghiệp khỏi rủi ro gian lận truy xuất nguồn gốc.
+  - Triệt tiêu nguy cơ bị phạt **4% doanh thu toàn cầu**.
 
----
-
-## 3. TÍNH NĂNG 02: GEMINI 2.5 FLASH OCR & LAND CONTRACT AUDITOR
-- **Tên tính năng:** Động cơ Thẩm định Hợp đồng Đất Nông hộ Gemini 2.5 Flash OCR
-- **Vấn đề nó giải:** Hàng ngàn hợp đồng thuê đất nông hộ viết tay hoặc scan nhòe đã hết hạn (EUDR Art. 3(b) yêu cầu đất hợp pháp). Kiểm tra thủ công gây trễ tiến độ nộp tờ khai.
-- **Cách hoạt động:** Ứng dụng mô hình Gemini 2.5 Flash OCR tối ưu hóa cho tài liệu tiếng Việt. Tự động bóc tách ngày ký, thời hạn hiệu lực, tên chủ hộ, diện tích đất, và dán cờ đỏ ERR_EXPIRED_LAND_AGREEMENT nếu hợp đồng hết hạn.
-- **Lợi ích đo được:** Tăng tốc độ xử lý file scan hợp đồng PDF/Image lên gấp 50 lần; Đạt độ chính xác bóc tách ngày tháng và diện tích 99,4%.
-
----
-
-## 4. TÍNH NĂNG 03: MASS BALANCE VICOFA YIELD CEILING GUARD
-- **Tên tính năng:** Vòng Bảo vệ Trần Sản Lượng Cân Bằng Khối Lượng VICOFA (3.500 kg/ha)
-- **Vấn đề nó giải:** Doanh nghiệp mua gom cà phê trôi nổi ngoài vùng trồng đăng ký. Khi sản lượng xuất khẩu khai báo vượt quá năng suất thực tế rẫy (trần VICOFA 3.500 kg/ha), Hải quan EU sẽ nghi vấn cà phê có nguồn gốc từ vùng phá rừng.
-- **Cách hoạt động:** Thuật toán Cân bằng Khối lượng (Mass Balance Guard) tính toán tổng sản lượng cà phê nhân xuất khẩu dựa trên diện tích rẫy hợp lệ. Nếu sản lượng/ha > 3.500 kg/ha, hệ thống lập tức chặn cấp Passport.
-- **Lợi ích đo được:** Đảm bảo 100% lô hàng xuất khẩu tuân thủ trần sản lượng VICOFA; Ngăn chặn triệt để rủi ro trà trộn cà phê không rõ nguồn gốc.
-
----
-
-## 5. TÍNH NĂNG 04: 5-YEAR EUDR PASSPORT & POSTGRESQL RLS VAULT
-- **Tên tính năng:** Mã QR EUDR Passport 5 Năm & Hạ tầng Cách ly Dữ liệu PostgreSQL RLS
-- **Vấn đề nó giải:** Nghĩa vụ lưu trữ hồ sơ 5 năm theo EUDR Điều 31 và nỗi lo rò rỉ dữ liệu vùng thu mua thương mại độc quyền cho đối thủ cạnh tranh.
-- **Cách hoạt động:** Khởi tạo mã QR EUDR Passport chứa mã hóa băm của toàn bộ hồ sơ tiền kiểm. Kết hợp cơ chế PostgreSQL Row-Level Security (RLS) cách ly tuyệt đối dữ liệu vùng thu mua.
-- **Lợi ích đo được:** Đáp ứng 100% nghĩa vụ lưu trữ 5 năm theo EUDR Art. 31; Bảo mật tuyệt đối 100% dữ liệu vùng trồng riêng tư của doanh nghiệp.
+## 4. PostgreSQL Row-Level Security (RLS)
+- **Tên tính năng:** Bảo mật Dữ liệu Cấp độ Dòng (Row-Level Security)
+- **Vấn đề pháp lý/vận hành nó giải quyết:** Đáp ứng yêu cầu **Lưu trữ hồ sơ bảo mật 05 năm (Art. 31)** và giải quyết nỗi lo lớn nhất của doanh nghiệp B2B: lộ lọt thông tin vùng trồng độc quyền vào tay đối thủ.
+- **Cách hoạt động:** Sử dụng kiến trúc Multi-Tenant của PostgreSQL RLS. Mỗi tập đoàn/doanh nghiệp có một không gian dữ liệu cách ly tuyệt đối ngay tại tầng Database. Ngay cả admin hệ thống hoặc hacker cũng không thể query dữ liệu của tenant khác.
+- **Lợi ích đo lường được:**
+  - Ngăn chặn thất thoát 100% dữ liệu chuỗi cung ứng.
+  - Đáp ứng tiêu chuẩn bảo mật Enterprise-grade cho các tập đoàn đa quốc gia.
