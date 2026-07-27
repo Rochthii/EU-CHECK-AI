@@ -1,58 +1,82 @@
-# Coffee EU-Check AI
+# ☕ Coffee EU-Check AI — Web Client
 
-> **Nền Tảng Tiền Kiểm Tuân Thủ EUDR & CBAM Cho Cà Phê Việt Nam**  
-> *B2B Multi-Tenant SaaS Pre-Audit Platform — Hệ thống tiền kiểm toán AI & GIS độc lập.*
+Chào mừng đến với mã nguồn giao diện (Front-end) của hệ thống **Coffee EU-Check AI** — Nền tảng Tiền kiểm Tuân thủ EUDR & CBAM chuyên biệt dành cho chuỗi cung ứng cà phê Việt Nam.
 
----
-
-## 1. Bài Toán & Giải Pháp
-
-- **Thách thức pháp lý 2026:** Hải quan EU tịch thu lô hàng hoặc phạt **4% doanh thu toàn cầu (EUDR Art. 38)** + chi phí đền bù lưu kho **$15,000/container** khi vi phạm:
-  1. **ERR_MISSING_POLYGON (Art. 9(1)(d)):** Vườn >4.0 ha nộp 1 điểm GPS Point thay vì Polygon khép góc.
-  2. **ERR_EXPIRED_LAND_AGREEMENT (Art. 3(b)):** Hợp đồng thuê/khoán đất nông hộ hết hiệu lực trước ngày mở tờ khai.
-  3. **ERR_YIELD_EXCEEDED (Art. 10):** Tổng sản lượng mua gom vượt trần VICOFA (3.500 kg/ha).
-- **Giải pháp:** Tiền kiểm 100% hồ sơ (<30 giây) → Chỉ số **Readiness Score (0-100)** → Báo cáo **Action Plan PDF chuẩn Annex II** & Cấp mã **EUDR Passport lưu trữ 5 năm (Art. 31)**.
+Dự án này được xây dựng dựa trên phong cách thiết kế **Themis Regal Legal-Tech** (Sang trọng, bảo mật và chuẩn B2B Enterprise).
 
 ---
 
-## 2. Cấu Trúc Multi-Project Workspace
+## 🚀 1. Yêu Cầu Hệ Thống (Prerequisites)
+Để chạy được mã nguồn này trên máy khách, bạn cần cài đặt:
+- **Node.js**: Phiên bản `v18.17.0` trở lên. (Khuyên dùng bản LTS mới nhất).
+- **Trình quản lý gói**: `npm` (đã đi kèm khi cài Node.js).
+- **Trình duyệt**: Google Chrome, Edge hoặc Firefox bản mới nhất.
 
-```text
-EU-CHECK/
-├── brand/               # Quy chuẩn thương hiệu & Brandkit dùng chung (brand.md)
-├── eu-check-web/        # Mã nguồn ứng dụng Website (Next.js, TailwindCSS)
-│   ├── content/         # Sitemap, specs & static data (sitemap_landing_page.md)
-│   └── app/             # App Router / Pages
-├── Content/             # Bài viết phân tích pháp lý EUDR, blog & tài liệu chuyên sâu
-├── ContentViral/        # Nội dung social (Facebook, LinkedIn), hook ngắn & bài viral
-└── Videos/              # Kịch bản video demo, Shorts/Reels sản xuất đa phương tiện
+---
+
+## ⚙️ 2. Hướng Dẫn Cài Đặt & Khởi Chạy (Getting Started)
+
+Mở Terminal (hoặc Command Prompt / PowerShell) và trỏ vào thư mục `eu-check-web`, sau đó thực hiện các bước sau:
+
+### Bước 1: Cài đặt thư viện (Dependencies)
+```bash
+npm install
+```
+*Lệnh này sẽ tải về toàn bộ các thư viện cần thiết như Next.js, React, TailwindCSS, Framer Motion, và Lucide React.*
+
+### Bước 2: Chạy môi trường phát triển (Development Server)
+```bash
+npm run dev
+```
+*Sau khi chạy thành công, hãy mở trình duyệt và truy cập vào:* 👉 **[http://localhost:3000](http://localhost:3000)**
+
+### Bước 3: Đóng gói bản chính thức (Production Build) - *Chỉ dùng khi cần đưa lên host thật*
+```bash
+npm run build
+npm start
 ```
 
 ---
 
-## 3. Động Cơ Công Nghệ Core
+## 📁 3. Cấu Trúc Thư Mục Chính
+Dự án sử dụng **Next.js 15 (App Router)**. Dưới đây là các thư mục bạn cần quan tâm:
 
-- **PostGIS & Turf.js Spatial Engine:** Thẩm định Polygon khép góc, đối soát giao thoa bản đồ rừng Copernicus 2020.
-- **Gemini 2.5 Flash OCR Engine:** Đọc & kiểm tra tự động thời hạn hợp đồng thuê đất nông hộ scan.
-- **Mass Balance Guard:** Tự động chặn gian lận trần sản lượng VICOFA (3.500 kg/ha).
-- **PostgreSQL Row-Level Security (RLS):** Cách ly 100% dữ liệu vùng thu mua thương mại độc quyền giữa các tenant.
+```text
+eu-check-web/
+├── app/                  # Thư mục App Router chính
+│   ├── globals.css       # File CSS tổng chứa hệ thống màu (Tailwind v4 theme)
+│   ├── layout.tsx        # Cấu trúc chung (Header, Footer, Font chữ)
+│   └── page.tsx          # Trang đích (Landing Page) lắp ráp các thành phần
+│
+├── components/landing/   # Các khối (Sections) giao diện của Landing Page
+│   ├── HeroStorySection.tsx
+│   ├── PainPointsStorySection.tsx
+│   ├── SolutionEngineSection.tsx
+│   ├── WorkflowStepsSection.tsx
+│   ├── RoiCalculatorSection.tsx
+│   ├── PricingSection.tsx
+│   └── FaqSection.tsx
+│
+├── public/               # Thư mục chứa hình ảnh tĩnh (logo, icon)
+├── AGENTS.md             # Tài liệu nội bộ hướng dẫn AI viết code dự án
+└── package.json          # Quản lý phiên bản các thư viện
+```
 
 ---
 
-## 4. Căn Cứ Pháp Lý Luật EU
+## 🎨 4. Nhận Diện Thương Hiệu (Brand Identity)
+Dự án được cấu hình sẵn hệ màu chuyên nghiệp trong `globals.css` để bạn sử dụng qua các class của Tailwind:
+- `bg-obsidian`: Màu đen nền sâu thẳm.
+- `text-parchment`: Màu trắng ngà cho chữ (không chói mắt).
+- `text-gold-400` / `bg-gold-500`: Màu vàng Hoàng gia (điểm nhấn quan trọng).
+- `text-emerald-400`: Màu xanh lục bảo (trạng thái an toàn, thành công).
 
-| Điều khoản EUDR | Nội dung quy định | Cơ chế giải quyết trên Coffee EU-Check AI |
-| :--- | :--- | :--- |
-| **Article 3(b)** | Quyền sử dụng đất hợp pháp | OCR kiểm tra thời hạn hợp đồng thuê đất nông hộ |
-| **Article 9(1)(d)** | Tọa độ địa lý vườn (Point/Polygon) | Turf.js validation khép góc Polygon > 4.0 ha |
-| **Article 10** | Đánh giá rủi ro & Cân bằng khối lượng | Mass Balance Yield Ceiling Guard (3.500 kg/ha) |
-| **Article 31** | Lưu trữ hồ sơ thẩm định 05 năm | Mã định danh QR Passport lưu trữ bảo mật |
-| **Article 38** | Chế tài xử phạt (4% doanh thu toàn cầu) | Pre-audit triệt tiêu rủi ro trước khi xuất cảng |
+**Font chữ tiếng Việt (đã tối ưu chống lỗi dấu):**
+- **Cormorant Garamond** (`font-serif`): Dùng cho các tiêu đề (Heading).
+- **Inter** (`font-sans`): Dùng cho văn bản thông thường (Body text).
+- **JetBrains Mono** (`font-mono`): Dùng cho các con số kỹ thuật, code.
 
 ---
 
-## 5. Mô Hình Thu Phí SaaS
-
-- **Pay-per-Shipment:** 1.200.000 VNĐ / lô hàng xuất khẩu (~$50 USD).
-- **Enterprise Professional:** 15.000.000 VNĐ / tháng (Quét không giới hạn + RBAC 4 Cấp + CBAM).
-- **Custom Infrastructure:** Báo giá B2B Tập đoàn Top 10 (Dedicated Supabase RLS + API ERP/SAP).
+## 📞 5. Hỗ Trợ (Support)
+Trong quá trình vận hành, nếu gặp lỗi liên quan đến giao diện hiển thị hoặc tính toán trên trình duyệt, hãy liên hệ với đội ngũ kỹ thuật của **Orchexa Enterprise Intelligence**.
