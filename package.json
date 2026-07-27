@@ -1,0 +1,14 @@
+{
+  "name": "eu-check-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix eu-check-web",
+    "build": "npm run build --prefix eu-check-web",
+    "start": "npm run start --prefix eu-check-web",
+    "lint": "npm run lint --prefix eu-check-web"
+  },
+  "dependencies": {
+    "next": "16.2.11"
+  }
+}
