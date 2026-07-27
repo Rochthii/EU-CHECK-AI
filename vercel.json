@@ -1,4 +1,5 @@
 {
-  "buildCommand": "npm run build --prefix eu-check-web",
+  "installCommand": "cd eu-check-web && npm install",
+  "buildCommand": "cd eu-check-web && npm run build",
   "outputDirectory": "eu-check-web/.next"
 }
